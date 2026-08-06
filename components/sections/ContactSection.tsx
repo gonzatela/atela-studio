@@ -47,37 +47,37 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
   };
 
   return (
-    <section id="contact" className="py-24 md:py-36 relative z-10 bg-zinc-950/90 border-t border-white/10">
+    <section id="contact" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd] border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-xs font-mono text-indigo-300 mb-6">
-                <MessageSquare className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-stone-50 text-xs font-mono text-stone-700 mb-6 shadow-xs">
+                <MessageSquare className="w-3.5 h-3.5 text-[#c5a059]" />
                 <span>Start a Project Brief</span>
               </div>
 
-              <h2 className="font-display font-extrabold text-4xl sm:text-6xl text-white tracking-tight leading-[1.05]">
+              <h2 className="font-display font-extrabold text-4xl sm:text-6xl text-stone-950 tracking-tight leading-[1.05]">
                 Let's build your brand’s next web asset.
               </h2>
 
-              <p className="mt-6 text-zinc-400 text-base font-light leading-relaxed">
+              <p className="mt-6 text-stone-600 text-base font-light leading-relaxed">
                 Whether you need a bespoke luxury portfolio, an interactive real estate portal, or a high-converting agency site, Atela Studio is ready to craft it.
               </p>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/10 space-y-6">
+            <div className="mt-12 pt-8 border-t border-stone-200 space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-zinc-900 border border-white/10 text-indigo-400">
+                <div className="p-3 rounded-2xl bg-stone-100 border border-stone-200 text-[#c5a059]">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-widest block">
+                  <span className="text-[11px] font-mono text-stone-500 uppercase tracking-widest block">
                     Direct Email Inquiry
                   </span>
                   <a
                     href="mailto:navarroatela@gmail.com"
-                    className="text-white font-display font-semibold hover:text-indigo-400 transition-colors"
+                    className="text-stone-950 font-display font-semibold hover:text-[#c5a059] transition-colors"
                   >
                     navarroatela@gmail.com
                   </a>
@@ -85,14 +85,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-zinc-900 border border-white/10 text-indigo-400">
+                <div className="p-3 rounded-2xl bg-stone-100 border border-stone-200 text-[#c5a059]">
                   <Globe className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-widest block">
+                  <span className="text-[11px] font-mono text-stone-500 uppercase tracking-widest block">
                     Studio Base
                   </span>
-                  <span className="text-white font-display font-semibold">
+                  <span className="text-stone-950 font-display font-semibold">
                     Madrid, Spain • Serving Global Clients
                   </span>
                 </div>
@@ -101,23 +101,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
           </div>
 
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-zinc-900/40 border border-white/15 backdrop-blur-xl relative">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-xl relative">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="py-16 text-center"
                 >
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-display font-bold text-3xl text-white">Inquiry Received</h3>
-                  <p className="text-zinc-400 text-sm mt-3 max-w-md mx-auto font-light">
+                  <h3 className="font-display font-bold text-3xl text-stone-950">Inquiry Received</h3>
+                  <p className="text-stone-600 text-sm mt-3 max-w-md mx-auto font-light">
                     Thank you, {name}! We will review your project brief and respond within 24 hours with an initial concept consultation.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-8 px-6 py-3 rounded-full bg-zinc-800 text-xs font-semibold text-white hover:bg-zinc-700 transition-colors"
+                    className="mt-8 px-6 py-3 rounded-full bg-stone-950 text-xs font-semibold text-white hover:bg-stone-850 transition-colors"
                   >
                     Send Another Project Brief
                   </button>
@@ -125,7 +125,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="text-xs font-mono uppercase tracking-widest text-zinc-400 block mb-3">
+                    <label className="text-xs font-mono uppercase tracking-widest text-stone-500 block mb-3">
                       Required Services
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -138,8 +138,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                             onClick={() => toggleService(serv)}
                             className={`px-3.5 py-1.5 rounded-full text-xs font-medium border transition-all ${
                               isSelected
-                                ? 'bg-indigo-600 border-indigo-500 text-white shadow-md'
-                                : 'bg-zinc-950 border-white/10 text-zinc-400 hover:text-white'
+                                ? 'bg-stone-950 border-stone-950 text-white shadow-sm'
+                                : 'bg-stone-50 border-stone-200 text-stone-600 hover:text-stone-950'
                             }`}
                           >
                             {serv}
@@ -150,7 +150,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono uppercase tracking-widest text-zinc-400 block mb-3">
+                    <label className="text-xs font-mono uppercase tracking-widest text-stone-500 block mb-3">
                       Estimated Investment Budget
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -161,8 +161,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                           onClick={() => setBudgetTier(b)}
                           className={`p-2.5 rounded-xl border text-xs font-medium text-center transition-all ${
                             budgetTier === b
-                              ? 'bg-indigo-600/20 border-indigo-500 text-white'
-                              : 'bg-zinc-950 border-white/10 text-zinc-400 hover:text-zinc-200'
+                              ? 'bg-stone-950 border-stone-950 text-white'
+                              : 'bg-stone-50 border-stone-200 text-stone-600 hover:text-stone-950'
                           }`}
                         >
                           {b}
@@ -173,7 +173,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs font-mono text-zinc-400 block mb-1">
+                      <label className="text-xs font-mono text-stone-600 block mb-1">
                         Your Name *
                       </label>
                       <input
@@ -182,12 +182,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Sofia Alarcón"
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-950 text-sm focus:outline-none focus:border-stone-950 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-mono text-zinc-400 block mb-1">
+                      <label className="text-xs font-mono text-stone-600 block mb-1">
                         Email Address *
                       </label>
                       <input
@@ -196,13 +196,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="sofia@brand.com"
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-950 text-sm focus:outline-none focus:border-stone-950 transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono text-zinc-400 block mb-1">
+                    <label className="text-xs font-mono text-stone-600 block mb-1">
                       Company / Existing Website URL
                     </label>
                     <input
@@ -210,12 +210,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
                       placeholder="e.g. www.mycompany.com"
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-950 text-sm focus:outline-none focus:border-stone-950 transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono text-zinc-400 block mb-1">
+                    <label className="text-xs font-mono text-stone-600 block mb-1">
                       Project Details & Brief
                     </label>
                     <textarea
@@ -223,15 +223,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Tell us about your brand vision, requirements, and target launch timeline..."
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-950 text-sm focus:outline-none focus:border-stone-950 transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-display font-semibold text-sm flex items-center justify-center gap-2 shadow-xl shadow-indigo-600/30 transition-all hover:scale-[1.01]"
+                    className="w-full py-4 rounded-full bg-stone-950 hover:bg-stone-850 text-white font-display font-semibold text-sm flex items-center justify-center gap-2 shadow-xl transition-all hover:scale-[1.01]"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 text-[#c5a059]" />
                     <span>Submit Project Inquiry</span>
                   </button>
                 </form>

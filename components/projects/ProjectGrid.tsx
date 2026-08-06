@@ -20,27 +20,27 @@ export const ProjectGrid: React.FC = () => {
   });
 
   return (
-    <section id="work" className="py-24 md:py-36 relative z-10">
+    <section id="work" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-zinc-900/60 text-xs font-mono text-indigo-400 mb-4">
-              <Layers className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-stone-50 text-xs font-mono text-stone-700 mb-4">
+              <Layers className="w-3.5 h-3.5 text-[#c5a059]" />
               <span>Selected Agency Portfolio</span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight">
+            <h2 className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-stone-950 tracking-tight">
               Featured Client Work
             </h2>
           </div>
 
-          <p className="text-zinc-400 text-sm sm:text-base max-w-md font-light">
+          <p className="text-stone-600 text-sm sm:text-base max-w-md font-light">
             Crafting tailored web solutions, interactive real estate portals, and monograph-style architecture portfolios with precision engineering.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 mb-12 border-b border-white/10 pb-6">
-          <div className="flex items-center gap-2 mr-4 text-xs font-mono text-zinc-400 uppercase tracking-widest hidden sm:flex">
-            <Filter className="w-3.5 h-3.5 text-indigo-400" />
+        <div className="flex flex-wrap items-center gap-2 mb-12 border-b border-stone-200 pb-6">
+          <div className="flex items-center gap-2 mr-4 text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:flex">
+            <Filter className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>Filter:</span>
           </div>
 
@@ -50,8 +50,8 @@ export const ProjectGrid: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
                 selectedCategory === cat
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
-                  : 'bg-zinc-900/60 text-zinc-400 border border-white/10 hover:text-white hover:border-white/20'
+                  ? 'bg-stone-950 text-white shadow-md'
+                  : 'bg-stone-100 text-stone-600 border border-stone-200 hover:text-stone-950 hover:bg-stone-200/60'
               }`}
             >
               {cat}

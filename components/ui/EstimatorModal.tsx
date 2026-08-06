@@ -74,48 +74,48 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/80 backdrop-blur-xl"
+          className="fixed inset-0 bg-stone-950/60 backdrop-blur-md"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-zinc-950 border border-white/15 rounded-3xl p-6 sm:p-10 z-10 custom-scrollbar shadow-2xl shadow-indigo-500/10"
+          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white border border-stone-200 rounded-3xl p-6 sm:p-10 z-10 custom-scrollbar shadow-2xl"
         >
           <button
             onClick={onClose}
             aria-label="Close estimator"
-            className="absolute top-6 right-6 p-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-400 hover:text-white"
+            className="absolute top-6 right-6 p-3 rounded-full bg-stone-100 border border-stone-200 text-stone-600 hover:text-stone-950"
           >
             <X className="w-5 h-5" />
           </button>
 
           {submitted ? (
             <div className="py-16 text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="font-display font-bold text-2xl text-white">Scope Estimate Applied!</h3>
-              <p className="text-zinc-400 text-sm mt-2">
+              <h3 className="font-display font-bold text-2xl text-stone-950">Scope Estimate Applied!</h3>
+              <p className="text-stone-600 text-sm mt-2">
                 Transferring your choices to the inquiry form below...
               </p>
             </div>
           ) : (
             <>
-              <div className="flex items-center gap-2 text-xs font-mono text-indigo-400 mb-2">
+              <div className="flex items-center gap-2 text-xs font-mono text-[#c5a059] font-bold mb-2">
                 <Calculator className="w-4 h-4" />
                 <span>Interactive Studio Calculator</span>
               </div>
-              <h2 className="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight">
+              <h2 className="font-display font-extrabold text-2xl sm:text-4xl text-stone-950 tracking-tight">
                 Estimate Project Scope & Investment
               </h2>
-              <p className="text-zinc-400 text-xs sm:text-sm mt-1 font-light">
+              <p className="text-stone-600 text-xs sm:text-sm mt-1 font-light">
                 Tailor your project requirements for an instant budget and timeline estimation.
               </p>
 
               <div className="mt-8">
-                <label className="text-xs font-mono uppercase tracking-widest text-zinc-400 block mb-3">
+                <label className="text-xs font-mono uppercase tracking-widest text-stone-500 block mb-3">
                   1. Select Web Experience Category
                 </label>
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -125,19 +125,19 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
                       onClick={() => setProjectType(type.id as any)}
                       className={`p-4 rounded-2xl border text-left transition-all ${
                         projectType === type.id
-                          ? 'bg-indigo-600/15 border-indigo-500 text-white shadow-lg'
-                          : 'bg-zinc-900/40 border-white/10 text-zinc-400 hover:border-white/20 hover:text-white'
+                          ? 'bg-stone-950 border-stone-950 text-white shadow-md'
+                          : 'bg-stone-50 border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-950'
                       }`}
                     >
-                      <div className="font-display font-bold text-sm text-white">{type.label}</div>
-                      <div className="text-[11px] text-zinc-400 mt-1">{type.desc}</div>
+                      <div className="font-display font-bold text-sm">{type.label}</div>
+                      <div className="text-[11px] opacity-80 mt-1">{type.desc}</div>
                     </button>
                   ))}
                 </div>
               </div>
 
               <div className="mt-8">
-                <label className="text-xs font-mono uppercase tracking-widest text-zinc-400 block mb-3">
+                <label className="text-xs font-mono uppercase tracking-widest text-stone-500 block mb-3">
                   2. Select Additional Modules & Specs
                 </label>
                 <div className="grid sm:grid-cols-2 gap-2">
@@ -149,16 +149,16 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
                         onClick={() => toggleFeature(feat.id)}
                         className={`p-3 rounded-xl border text-xs font-medium flex items-center justify-between transition-all ${
                           isSelected
-                            ? 'bg-indigo-500/20 border-indigo-500/60 text-white'
-                            : 'bg-zinc-900/40 border-white/10 text-zinc-400 hover:text-zinc-200'
+                            ? 'bg-stone-950 border-stone-950 text-white'
+                            : 'bg-stone-50 border-stone-200 text-stone-600 hover:text-stone-950'
                         }`}
                       >
                         <span>{feat.label}</span>
                         <div
                           className={`w-5 h-5 rounded-md flex items-center justify-center border ${
                             isSelected
-                              ? 'bg-indigo-600 border-indigo-400 text-white'
-                              : 'border-white/20'
+                              ? 'bg-[#c5a059] border-[#c5a059] text-stone-950'
+                              : 'border-stone-300'
                           }`}
                         >
                           {isSelected && <Check className="w-3.5 h-3.5" />}
@@ -170,7 +170,7 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
               </div>
 
               <div className="mt-8">
-                <label className="text-xs font-mono uppercase tracking-widest text-zinc-400 block mb-3">
+                <label className="text-xs font-mono uppercase tracking-widest text-stone-500 block mb-3">
                   3. Project Delivery Speed
                 </label>
                 <div className="grid grid-cols-2 gap-3">
@@ -178,8 +178,8 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
                     onClick={() => setTimeline('standard')}
                     className={`p-3 rounded-xl border text-xs font-medium text-center transition-all ${
                       timeline === 'standard'
-                        ? 'bg-indigo-600/20 border-indigo-500 text-white'
-                        : 'bg-zinc-900/40 border-white/10 text-zinc-400'
+                        ? 'bg-stone-950 border-stone-950 text-white'
+                        : 'bg-stone-50 border-stone-200 text-stone-600'
                     }`}
                   >
                     Standard Studio Pace (3-4 Weeks)
@@ -188,8 +188,8 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
                     onClick={() => setTimeline('rush')}
                     className={`p-3 rounded-xl border text-xs font-medium text-center transition-all ${
                       timeline === 'rush'
-                        ? 'bg-indigo-600/20 border-indigo-500 text-white'
-                        : 'bg-zinc-900/40 border-white/10 text-zinc-400'
+                        ? 'bg-stone-950 border-stone-950 text-white'
+                        : 'bg-stone-50 border-stone-200 text-stone-600'
                     }`}
                   >
                     Priority Rush (1-2 Weeks)
@@ -197,22 +197,22 @@ export const EstimatorModal: React.FC<EstimatorModalProps> = ({
                 </div>
               </div>
 
-              <div className="mt-10 p-6 rounded-2xl bg-zinc-900/80 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="mt-10 p-6 rounded-2xl bg-stone-50 border border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest block">
+                  <span className="text-xs font-mono text-stone-500 uppercase tracking-widest block">
                     Estimated Studio Investment Range
                   </span>
-                  <div className="font-display font-extrabold text-3xl text-white mt-1">
+                  <div className="font-display font-extrabold text-3xl text-stone-950 mt-1">
                     €{calculatedPrice.toLocaleString()}{' '}
-                    <span className="text-xs font-mono font-normal text-zinc-400">EST. EUR</span>
+                    <span className="text-xs font-mono font-normal text-stone-500">EST. EUR</span>
                   </div>
                 </div>
 
                 <button
                   onClick={handleApplyEstimate}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-display font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/30 transition-all hover:scale-105"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-stone-950 hover:bg-stone-850 text-white font-display font-semibold text-xs flex items-center justify-center gap-2 shadow-lg transition-all hover:scale-105"
                 >
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-4 h-4 text-[#c5a059]" />
                   <span>Transfer Scope to Contact Form</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>

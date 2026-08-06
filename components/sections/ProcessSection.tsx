@@ -37,16 +37,16 @@ export const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-24 md:py-36 relative z-10">
+    <section id="process" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-mono text-indigo-400 uppercase tracking-widest block mb-2">
+          <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-bold">
             Methodology & Flow
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-stone-950 tracking-tight">
             How Atela Studio delivers results.
           </h2>
-          <p className="mt-4 text-zinc-400 text-base font-light">
+          <p className="mt-4 text-stone-600 text-base font-light">
             A transparent, 4-phase agency workflow built to deliver your web project on time, with uncompromising aesthetic and technical quality.
           </p>
         </div>
@@ -59,22 +59,22 @@ export const ProcessSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-8 rounded-3xl bg-zinc-900/30 border border-white/10 relative overflow-hidden group hover:border-indigo-500/40 transition-colors"
+              className="p-8 rounded-3xl bg-white border border-stone-200 shadow-xs relative overflow-hidden group hover:border-[#c5a059] transition-colors"
             >
-              <div className="text-4xl font-display font-black text-white/10 group-hover:text-indigo-500/20 transition-colors mb-6">
+              <div className="text-4xl font-display font-black text-stone-200 group-hover:text-[#c5a059]/30 transition-colors mb-6">
                 {step.num}
               </div>
 
-              <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-400 w-fit mb-4">
+              <div className="p-3 rounded-2xl bg-stone-100 text-[#c5a059] w-fit mb-4">
                 <step.icon className="w-5 h-5" />
               </div>
 
-              <h3 className="font-display font-bold text-lg text-white mb-2">{step.title}</h3>
-              <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
+              <h3 className="font-display font-bold text-lg text-stone-950 mb-2">{step.title}</h3>
+              <p className="text-xs text-stone-600 font-light leading-relaxed mb-6">
                 {step.description}
               </p>
 
-              <span className="inline-block px-3 py-1 rounded-full bg-zinc-950 border border-white/5 text-[10px] font-mono text-zinc-400">
+              <span className="inline-block px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-[10px] font-mono text-stone-600">
                 Est: {step.duration}
               </span>
             </motion.div>
