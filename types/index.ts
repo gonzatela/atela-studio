@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   client: string;
-  category: 'Real Estate' | 'Interior Design' | 'E-Commerce' | 'Fintech' | 'Branding';
+  category: 'Real Estate' | 'Interior Design' | 'Interiorismo' | 'E-Commerce' | 'Fintech' | 'Branding';
   year: string;
   description: string;
   fullDescription: string;
