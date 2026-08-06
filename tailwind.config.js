@@ -9,38 +9,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#fdfdfd',
+        background: '#faf8f5', // Blanco crudo / Warm raw porcelain off-white
         surface: {
-          50: '#f8f8f6',
-          100: '#f2f2ef',
-          200: '#e8e8e4',
-          300: '#d5d5cf',
+          50: '#f5f2eb',
+          100: '#eee9de',
+          200: '#e3dcce',
+          300: '#d0c6b3',
         },
-        border: 'rgba(0, 0, 0, 0.08)',
+        border: 'rgba(0, 0, 0, 0.07)',
         accent: {
           gold: '#c5a059',
           goldHover: '#b38e48',
           goldLight: 'rgba(197, 160, 89, 0.12)',
-          dark: '#0a0a0c',
+          dark: '#1c1917',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
         display: ['var(--font-syne)', 'sans-serif'],
       },
-      animation: {
-        'float': 'float 6s infinite ease-in-out',
-        'marquee': 'marquee 30s linear infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
+      transitionTimingFunction: {
+        'emil-out': 'cubic-bezier(0.23, 1, 0.32, 1)',
+        'emil-in-out': 'cubic-bezier(0.77, 0, 0.175, 1)',
       },
     },
   },

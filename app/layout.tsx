@@ -15,12 +15,12 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: 'Atela Studio | Digital Architecture & Bespoke Web Development',
+  title: 'Atela Studio | Digital Architecture & Bespoke Web Engineering',
   description: 'Boutique web design & engineering studio crafting high-converting, clean, luxury web platforms for companies.',
   keywords: ['Atela Studio', 'Web Design Agency', 'Next.js Development', 'Bespoke Websites', 'Real Estate Web Development', 'Luxury Digital Agency'],
   authors: [{ name: 'Atela Studio' }],
   openGraph: {
-    title: 'Atela Studio | Digital Architecture & Bespoke Web Development',
+    title: 'Atela Studio | Digital Architecture & Bespoke Web Engineering',
     description: 'Boutique web design & engineering studio crafting clean, high-converting luxury web platforms.',
     url: 'https://atelastudio.com',
     siteName: 'Atela Studio',
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${syne.variable}`}>
-      <body className="bg-[#fdfdfd] text-[#0a0a0c] antialiased selection:bg-[#c5a059]/20 selection:text-[#0a0a0c] custom-scrollbar">
+      <body className="bg-[#faf8f5] text-[#1c1917] antialiased selection:bg-[#c5a059]/25 selection:text-[#1c1917] custom-scrollbar">
         {children}
       </body>
     </html>
