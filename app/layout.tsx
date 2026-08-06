@@ -15,16 +15,20 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: 'Atela Studio | Digital Architecture & Bespoke Web Engineering',
-  description: 'Boutique web design & engineering studio crafting high-converting, clean, luxury web platforms for companies.',
-  keywords: ['Atela Studio', 'Web Design Agency', 'Next.js Development', 'Bespoke Websites', 'Real Estate Web Development', 'Luxury Digital Agency'],
-  authors: [{ name: 'Atela Studio' }],
+  title: 'Atela Studio | Diseño Web Exclusivo & Creación Digital',
+  description: 'Estudio de diseño web profesional de forma rápida y a medida por Gonzalo Atela.',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  authors: [{ name: 'Gonzalo Atela' }],
   openGraph: {
-    title: 'Atela Studio | Digital Architecture & Bespoke Web Engineering',
-    description: 'Boutique web design & engineering studio crafting clean, high-converting luxury web platforms.',
+    title: 'Atela Studio | Diseño Web Exclusivo & Creación Digital',
+    description: 'Estudio de diseño web profesional de forma rápida y a medida por Gonzalo Atela.',
     url: 'https://atelastudio.com',
     siteName: 'Atela Studio',
-    locale: 'en_US',
+    locale: 'es_ES',
     type: 'website',
   },
 };
@@ -35,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${syne.variable}`}>
+    <html lang="es" className={`scroll-smooth ${inter.variable} ${syne.variable}`}>
       <body className="bg-[#faf8f5] text-[#1c1917] antialiased selection:bg-[#c5a059]/25 selection:text-[#1c1917] custom-scrollbar">
         {children}
       </body>
