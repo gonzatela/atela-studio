@@ -6,7 +6,6 @@ import { PROJECTS } from '@/data/projects';
 import { Project } from '@/types';
 import { ProjectCard } from './ProjectCard';
 import { ProjectModal } from './ProjectModal';
-import { Layers, Filter } from 'lucide-react';
 
 export const ProjectGrid: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -21,45 +20,36 @@ export const ProjectGrid: React.FC = () => {
 
   return (
     <section id="work" className="py-24 md:py-36 relative z-10 bg-[#faf8f5]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-white text-xs font-mono text-stone-700 mb-4 shadow-xs">
-              <Layers className="w-3.5 h-3.5 text-[#c5a059]" />
-              <span>Selected Agency Portfolio</span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-stone-950 tracking-tight">
-              Featured Client Work
-            </h2>
-          </div>
-
-          <p className="text-stone-600 text-sm sm:text-base max-w-md font-light">
-            Crafting tailored web solutions, interactive real estate portals, and monograph-style architecture portfolios with precision engineering.
+      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+        <div className="max-w-3xl mb-12">
+          <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
+            Portfolio Seleccionado
+          </span>
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-stone-950 tracking-tight">
+            Trabajos y Proyectos Recientes
+          </h2>
+          <p className="mt-3 text-stone-600 text-base font-light">
+            Una muestra de sitios web reales y conceptos digitales diseñados a medida.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 mb-12 border-b border-stone-200 pb-6">
-          <div className="flex items-center gap-2 mr-4 text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:flex">
-            <Filter className="w-3.5 h-3.5 text-[#c5a059]" />
-            <span>Filter:</span>
-          </div>
-
+        <div className="flex flex-wrap items-center gap-3 mb-16 border-b border-stone-200/80 pb-6">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all active:scale-95 ${
                 selectedCategory === cat
-                  ? 'bg-stone-950 text-white shadow-sm'
-                  : 'bg-white text-stone-600 border border-stone-200 hover:text-stone-950 hover:bg-stone-50'
+                  ? 'bg-stone-900 text-white shadow-xs'
+                  : 'bg-white text-stone-600 border border-stone-200/80 hover:text-stone-950'
               }`}
             >
-              {cat}
+              {cat === 'All' ? 'Todos' : cat}
             </button>
           ))}
         </div>
 
-        <motion.div layout className="grid md:grid-cols-2 gap-8">
+        <motion.div layout className="grid md:grid-cols-2 gap-12">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <ProjectCard
