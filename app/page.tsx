@@ -1,15 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CustomCursor } from '@/components/CustomCursor';
-import { Navbar } from '@/components/Navbar';
-import { HeroSection } from '@/components/HeroSection';
-import { ProjectGrid } from '@/components/ProjectGrid';
-import { ServicesSection } from '@/components/ServicesSection';
-import { ProcessSection } from '@/components/ProcessSection';
-import { EstimatorModal } from '@/components/EstimatorModal';
-import { ContactSection } from '@/components/ContactSection';
-import { Footer } from '@/components/Footer';
+import { CustomCursor, Navbar, Footer, EstimatorModal } from '@/components/ui';
+import { HeroSection, ServicesSection, ProcessSection, FounderSection, ContactSection } from '@/components/sections';
+import { ProjectGrid } from '@/components/projects';
 
 export default function Home() {
   const [isEstimatorOpen, setIsEstimatorOpen] = useState(false);
@@ -28,6 +22,7 @@ export default function Home() {
       <ProjectGrid />
       <ServicesSection onOpenEstimator={() => setIsEstimatorOpen(true)} />
       <ProcessSection />
+      <FounderSection />
       
       <ContactSection initialEstimate={estimateDetails} />
       <Footer />
