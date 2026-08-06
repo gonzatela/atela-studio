@@ -21,7 +21,7 @@ export const ProjectGrid: React.FC = () => {
   });
 
   return (
-    <section id="work" className="py-24 md:py-36 relative z-10 bg-[#faf8f5]">
+    <section id="work" className="py-24 md:py-36 relative z-10 bg-white border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="max-w-3xl mb-12">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
@@ -43,7 +43,7 @@ export const ProjectGrid: React.FC = () => {
               className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all active:scale-95 ${
                 selectedCategory === cat
                   ? 'bg-stone-900 text-white shadow-xs'
-                  : 'bg-white text-stone-600 border border-stone-200/80 hover:text-stone-950'
+                  : 'bg-[#faf8f5] text-stone-600 border border-stone-200/80 hover:text-stone-950 hover:border-[#c5a059]'
               }`}
             >
               {cat}

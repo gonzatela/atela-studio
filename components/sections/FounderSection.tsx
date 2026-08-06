@@ -7,7 +7,7 @@ import { ArrowUpRight, Mail, Linkedin } from 'lucide-react';
 
 export const FounderSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 md:py-36 relative z-10 bg-[#faf8f5] border-t border-stone-200/80">
+    <section id="about" className="py-24 md:py-36 relative z-10 bg-[#f6f1e9] border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <motion.div
@@ -17,7 +17,7 @@ export const FounderSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-stone-200 aspect-[3/4] shadow-md">
+            <div className="relative rounded-2xl overflow-hidden bg-stone-300 aspect-[3/4] shadow-md">
               <img
                 src={FOUNDER_IMAGE}
                 alt="Gonzalo Atela - Fundador de Atela Studio"
@@ -25,7 +25,7 @@ export const FounderSection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent opacity-60" />
 
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-stone-200/80 shadow-xs">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-stone-300/80 shadow-xs">
                 <h4 className="font-display font-bold text-stone-950 text-base">Gonzalo Atela</h4>
                 <p className="text-xs font-mono text-[#c5a059] font-semibold">Fundador & Creador Digital</p>
               </div>
@@ -65,7 +65,7 @@ export const FounderSection: React.FC = () => {
 
               <a
                 href="mailto:g.atelanavarro@gmail.com"
-                className="px-6 py-3.5 rounded-full bg-white border border-stone-200/80 text-stone-800 hover:text-stone-950 text-xs font-mono font-medium flex items-center gap-2 transition-all shadow-xs active:scale-95"
+                className="px-6 py-3.5 rounded-full bg-white border border-stone-300 text-stone-800 hover:text-stone-950 text-xs font-mono font-medium flex items-center gap-2 transition-all shadow-xs active:scale-95"
               >
                 <Mail className="w-3.5 h-3.5 text-[#c5a059]" />
                 <span>g.atelanavarro@gmail.com</span>

@@ -32,7 +32,7 @@ export const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-24 md:py-36 relative z-10 bg-[#faf8f5]">
+    <section id="process" className="py-24 md:py-36 relative z-10 bg-white border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
@@ -54,9 +54,9 @@ export const ProcessSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="space-y-4"
+              className="space-y-4 group"
             >
-              <span className="text-4xl font-display font-black text-stone-300 block">
+              <span className="text-4xl font-display font-black text-stone-300 group-hover:text-[#c5a059] transition-colors block">
                 {step.num}
               </span>
               <h3 className="font-display font-bold text-xl text-stone-950">{step.title}</h3>

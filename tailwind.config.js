@@ -9,19 +9,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#faf8f5', // Blanco crudo / Warm raw porcelain off-white
+        background: '#faf8f5',
         surface: {
-          50: '#f5f2eb',
-          100: '#eee9de',
-          200: '#e3dcce',
-          300: '#d0c6b3',
+          silk: '#f6f1e9', // Soft warm champagne silk background
+          ivory: '#fbf9f5',
+          warm: '#f3ece1',
         },
-        border: 'rgba(0, 0, 0, 0.07)',
         accent: {
           gold: '#c5a059',
+          amber: '#d97706', // Warm vibrant amber orange accent
           goldHover: '#b38e48',
-          goldLight: 'rgba(197, 160, 89, 0.12)',
-          dark: '#1c1917',
         },
       },
       fontFamily: {
@@ -30,7 +27,6 @@ module.exports = {
       },
       transitionTimingFunction: {
         'emil-out': 'cubic-bezier(0.23, 1, 0.32, 1)',
-        'emil-in-out': 'cubic-bezier(0.77, 0, 0.175, 1)',
       },
     },
   },

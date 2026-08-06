@@ -39,7 +39,7 @@ export const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-36 relative z-10 bg-[#faf8f5] border-t border-stone-200/80">
+    <section id="services" className="py-24 md:py-36 relative z-10 bg-[#f6f1e9] border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="max-w-3xl mb-20">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
@@ -48,7 +48,7 @@ export const ServicesSection: React.FC = () => {
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-stone-950 tracking-tight leading-tight">
             Servicios creados para destacar tu marca.
           </h2>
-          <p className="mt-4 text-stone-600 text-base sm:text-lg font-light">
+          <p className="mt-4 text-stone-700 text-base sm:text-lg font-light">
             Creamos páginas web personalizadas que generan confianza y transmiten la personalidad de tu negocio.
           </p>
         </div>
@@ -61,19 +61,19 @@ export const ServicesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="py-4 border-t border-stone-200/80 group"
+              className="py-4 border-t border-stone-300/80 group"
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 rounded-full bg-white border border-stone-200 text-[#c5a059] shadow-xs group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-full bg-white border border-stone-300 text-[#c5a059] shadow-xs group-hover:scale-110 group-hover:border-[#c5a059] transition-all">
                   <service.icon className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-mono text-stone-400 font-bold">0{idx + 1}</span>
+                <span className="text-[11px] font-mono text-stone-500 font-bold">0{idx + 1}</span>
               </div>
 
               <h3 className="font-display font-bold text-xl text-stone-950 group-hover:text-[#c5a059] transition-colors">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm text-stone-600 font-light leading-relaxed">
+              <p className="mt-3 text-sm text-stone-700 font-light leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
