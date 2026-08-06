@@ -7,26 +7,26 @@ export const ProcessSection: React.FC = () => {
   const steps = [
     {
       num: '01',
-      title: 'Idea y Objetivos',
-      description: 'Hablamos sobre tu negocio, tus gustos visuales y lo que necesitas transmitir en tu web.',
+      title: 'Toma de Contacto e Idea',
+      description: 'Hablamos sobre tu negocio, el estilo visual que te gusta y el objetivo de tu web para empezar de inmediato.',
       duration: 'Paso 1',
     },
     {
       num: '02',
-      title: 'Diseño y Maquetación',
-      description: 'Creamos la estructura visual, seleccionando colores, fuentes y distribución perfecta para tu contenido.',
+      title: 'Creación Ágil de la Web',
+      description: 'Construimos la primera versión completa de tu web de forma rápida utilizando diseño de vanguardia e inteligencia artificial.',
       duration: 'Paso 2',
     },
     {
       num: '03',
-      title: 'Desarrollo e IA',
-      description: 'Construimos tu web aplicando las últimas herramientas de diseño e inteligencia artificial para máxima rapidez y pulidez.',
+      title: 'Etapas de Feedback y Cambios',
+      description: 'Revisamos juntos la web. Me indicas exactamente qué ajustar o cambiar hasta que quede 100% a tu gusto.',
       duration: 'Paso 3',
     },
     {
       num: '04',
-      title: 'Lanzamiento',
-      description: 'Publicamos tu página web en internet, conectamos tu dominio personalizado y te enseñamos a gestionarla.',
+      title: 'Lanzamiento y Publicación',
+      description: 'Publicamos tu web profesional en internet en tu dominio personalizado para que empiece a recibir visitas.',
       duration: 'Paso 4',
     },
   ];
@@ -36,13 +36,13 @@ export const ProcessSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
-            Cómo Trabajamos
+            Metodología Ágil
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-stone-950 tracking-tight">
-            Un proceso sencillo y transparente.
+            Un proceso rápido con revisiones a tu medida.
           </h2>
           <p className="mt-4 text-stone-600 text-base font-light">
-            Cuatro etapas para tener tu página web lista y funcionando sin complicaciones.
+            Tu web lista en tiempo récord con etapas claras de feedback donde tú decides los cambios.
           </p>
         </div>
 

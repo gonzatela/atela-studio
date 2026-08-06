@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HERO_BG_IMAGE } from '@/data/heroBg';
 import { FOUNDER_IMAGE } from '@/data/founder';
-import { ArrowDownRight, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Zap } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
             className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-stone-950 tracking-tight leading-[1.04]"
           >
-            Diseño web exclusivo para marcas con carácter.
+            Consigue tu web profesional de forma rápida.
           </motion.h1>
 
           <motion.p
@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
             className="mt-6 text-lg sm:text-2xl text-stone-800 max-w-2xl font-light leading-relaxed"
           >
-            Creamos experiencias digitales únicas, rápidas y atractivas. Combinando diseño de vanguardia e inteligencia artificial para elevar tu presencia online.
+            Diseñamos y creamos la página web que tu marca necesita a medida, con un proceso ágil y etapas de feedback continuo para adaptar cada detalle a tu gusto.
           </motion.p>
 
           <motion.div
@@ -64,7 +64,7 @@ export const HeroSection: React.FC = () => {
               href="#work"
               className="px-8 py-4 rounded-full bg-stone-900 text-white font-display font-semibold text-sm hover:bg-stone-800 transition-all flex items-center gap-3 shadow-lg active:scale-[0.97] group"
             >
-              <span>Ver Proyectos</span>
+              <span>Ver Webs Reales</span>
               <ArrowDownRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform text-[#c5a059]" />
             </a>
 
@@ -72,7 +72,7 @@ export const HeroSection: React.FC = () => {
               href="#contact"
               className="px-8 py-4 rounded-full bg-white/90 border border-stone-300 text-stone-900 font-display font-semibold text-sm hover:bg-white transition-all flex items-center gap-3 active:scale-[0.97] shadow-xs backdrop-blur-md"
             >
-              <span>Hablar con Gonzalo</span>
+              <span>Pedir tu Web</span>
               <ArrowUpRight className="w-4 h-4 text-[#c5a059]" />
             </a>
           </motion.div>
@@ -89,7 +89,7 @@ export const HeroSection: React.FC = () => {
               Proyectos Reales en Producción
             </span>
             <span className="text-sm text-stone-900 font-medium">
-              Webs en vivo para arquitectura, inmobiliaria e interiorismo
+              Webs publicadas y en funcionamiento
             </span>
           </div>
 
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
               className="px-4 py-2 rounded-full bg-white/90 border border-stone-300 text-xs font-semibold text-stone-900 flex items-center gap-2 hover:border-[#c5a059] transition-all shadow-xs"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span>G&G Interiorismo</span>
+              <span>G&N Interiorismo</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
             </a>
           </div>

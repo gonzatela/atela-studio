@@ -8,14 +8,16 @@ import { ProjectCard } from './ProjectCard';
 import { ProjectModal } from './ProjectModal';
 
 export const ProjectGrid: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'Real Estate', 'Interior Design', 'Branding', 'Fintech'];
+  const categories = ['Todos', 'Real Estate', 'Interiorismo'];
 
   const filteredProjects = PROJECTS.filter((project) => {
-    if (selectedCategory === 'All') return true;
-    return project.category === selectedCategory;
+    if (selectedCategory === 'Todos') return true;
+    if (selectedCategory === 'Real Estate') return project.category === 'Real Estate';
+    if (selectedCategory === 'Interiorismo') return project.category === 'Interiorismo';
+    return true;
   });
 
   return (
@@ -23,13 +25,13 @@ export const ProjectGrid: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="max-w-3xl mb-12">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-semibold">
-            Portfolio Seleccionado
+            Proyectos Reales
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-stone-950 tracking-tight">
-            Trabajos y Proyectos Recientes
+            Nuestros Trabajos en Vivo
           </h2>
           <p className="mt-3 text-stone-600 text-base font-light">
-            Una muestra de sitios web reales y conceptos digitales diseñados a medida.
+            Páginas web profesionales diseñadas a medida y publicadas en internet.
           </p>
         </div>
 
@@ -44,7 +46,7 @@ export const ProjectGrid: React.FC = () => {
                   : 'bg-white text-stone-600 border border-stone-200/80 hover:text-stone-950'
               }`}
             >
-              {cat === 'All' ? 'Todos' : cat}
+              {cat}
             </button>
           ))}
         </div>

@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
                 ATELA STUDIO
               </span>
               <p className="mt-4 text-sm text-stone-600 max-w-sm font-light leading-relaxed">
-                Estudio de diseño web y creación digital a medida. Creamos páginas web elegantes y eficientes para marcas de todo el mundo.
+                Diseño web profesional de forma rápida y a medida. Creamos páginas web elegantes y funcionales adaptadas a tu negocio.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
 
           <div className="md:col-span-4">
             <h4 className="text-xs font-mono uppercase tracking-widest text-stone-500 mb-4 font-semibold">
-              Proyectos Destacados en Vivo
+              Proyectos Reales en Vivo
             </h4>
             <ul className="space-y-3">
               <li>
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span className="font-semibold text-sm">G&G Interiorismo</span>
+                    <span className="font-semibold text-sm">G&N Interiorismo</span>
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-stone-400" />
                 </a>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Atela Studio. Todos los derechos reservados.
           </div>
           <div>
-            <span>Diseño visual & IA por Gonzalo Atela</span>
+            <span>Gonzalo Atela</span>
           </div>
         </div>
       </div>
