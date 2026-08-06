@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Linkedin } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,19 +11,22 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-10 pb-16 border-b border-stone-200/80">
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
-              <span className="font-display font-black text-2xl tracking-tighter text-stone-900 uppercase">
-                ATELA STUDIO
-              </span>
+              <Logo />
               <p className="mt-4 text-sm text-stone-600 max-w-sm font-light leading-relaxed">
                 Diseño web profesional de forma rápida y a medida. Creamos páginas web elegantes y funcionales adaptadas a tu negocio.
               </p>
             </div>
 
-            <div className="mt-8 flex items-center gap-4 text-xs font-mono text-stone-500">
-              <span className="flex items-center gap-1.5 font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                Gonzalo Atela
-              </span>
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-xs font-mono text-stone-500">
+              <a
+                href="https://www.linkedin.com/in/gonzalo-atela/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 font-medium text-stone-800 hover:text-[#c5a059] transition-colors"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#c5a059]" />
+                LinkedIn (Gonzalo Atela)
+              </a>
               <span>•</span>
               <a href="mailto:g.atelanavarro@gmail.com" className="hover:text-stone-900 transition-colors">
                 g.atelanavarro@gmail.com

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,9 +38,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between">
         <a href="#" className="group flex items-center gap-3">
-          <span className="font-display font-black text-2xl tracking-tighter text-stone-900 group-hover:text-[#c5a059] transition-colors">
-            ATELA STUDIO
-          </span>
+          <Logo />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">

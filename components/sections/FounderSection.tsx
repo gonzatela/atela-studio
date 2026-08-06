@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FOUNDER_IMAGE } from '@/data/founder';
-import { ArrowUpRight, Mail } from 'lucide-react';
+import { ArrowUpRight, Mail, Linkedin } from 'lucide-react';
 
 export const FounderSection: React.FC = () => {
   return (
@@ -53,11 +53,14 @@ export const FounderSection: React.FC = () => {
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/gonzalo-atela/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-full bg-stone-900 text-white font-display font-semibold text-xs flex items-center gap-2 hover:bg-stone-800 transition-colors shadow-md active:scale-95"
               >
-                <span>Escríbeme para tu Proyecto</span>
-                <ArrowUpRight className="w-4 h-4 text-[#c5a059]" />
+                <Linkedin className="w-4 h-4 text-[#c5a059]" />
+                <span>Perfil de LinkedIn</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
               </a>
 
               <a
