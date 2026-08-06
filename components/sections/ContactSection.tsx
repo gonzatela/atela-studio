@@ -47,12 +47,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
   };
 
   return (
-    <section id="contact" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd] border-t border-stone-200">
+    <section id="contact" className="py-24 md:py-36 relative z-10 bg-[#faf8f5] border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-stone-50 text-xs font-mono text-stone-700 mb-6 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-white text-xs font-mono text-stone-700 mb-6 shadow-xs">
                 <MessageSquare className="w-3.5 h-3.5 text-[#c5a059]" />
                 <span>Start a Project Brief</span>
               </div>
@@ -68,7 +68,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
 
             <div className="mt-12 pt-8 border-t border-stone-200 space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-stone-100 border border-stone-200 text-[#c5a059]">
+                <div className="p-3 rounded-2xl bg-white border border-stone-200 text-[#c5a059] shadow-xs">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -85,7 +85,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-stone-100 border border-stone-200 text-[#c5a059]">
+                <div className="p-3 rounded-2xl bg-white border border-stone-200 text-[#c5a059] shadow-xs">
                   <Globe className="w-5 h-5" />
                 </div>
                 <div>
@@ -229,7 +229,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialEstimate 
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-stone-950 hover:bg-stone-850 text-white font-display font-semibold text-sm flex items-center justify-center gap-2 shadow-xl transition-all hover:scale-[1.01]"
+                    className="w-full py-4 rounded-full bg-stone-950 hover:bg-stone-850 text-white font-display font-semibold text-sm flex items-center justify-center gap-2 shadow-xl transition-all active:scale-[0.98]"
                   >
                     <Send className="w-4 h-4 text-[#c5a059]" />
                     <span>Submit Project Inquiry</span>

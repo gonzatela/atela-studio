@@ -20,11 +20,11 @@ export const ProjectGrid: React.FC = () => {
   });
 
   return (
-    <section id="work" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd]">
+    <section id="work" className="py-24 md:py-36 relative z-10 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-stone-50 text-xs font-mono text-stone-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-200 bg-white text-xs font-mono text-stone-700 mb-4 shadow-xs">
               <Layers className="w-3.5 h-3.5 text-[#c5a059]" />
               <span>Selected Agency Portfolio</span>
             </div>
@@ -48,10 +48,10 @@ export const ProjectGrid: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
+              className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all active:scale-95 ${
                 selectedCategory === cat
-                  ? 'bg-stone-950 text-white shadow-md'
-                  : 'bg-stone-100 text-stone-600 border border-stone-200 hover:text-stone-950 hover:bg-stone-200/60'
+                  ? 'bg-stone-950 text-white shadow-sm'
+                  : 'bg-white text-stone-600 border border-stone-200 hover:text-stone-950 hover:bg-stone-50'
               }`}
             >
               {cat}

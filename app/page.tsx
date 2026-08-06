@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#09090b] text-zinc-100 selection:bg-indigo-500/40 relative">
+    <main className="min-h-screen bg-[#faf8f5] text-stone-900 selection:bg-[#c5a059]/25 relative">
       <CustomCursor />
       <Navbar onOpenEstimator={() => setIsEstimatorOpen(true)} />
       

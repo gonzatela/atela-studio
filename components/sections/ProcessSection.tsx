@@ -37,7 +37,7 @@ export const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-24 md:py-36 relative z-10 bg-[#fdfdfd]">
+    <section id="process" className="py-24 md:py-36 relative z-10 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-mono text-[#c5a059] uppercase tracking-widest block mb-2 font-bold">
