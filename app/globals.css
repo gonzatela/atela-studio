@@ -10,15 +10,15 @@
   }
 
   body {
-    background-color: #faf8f5;
-    color: #1c1917;
+    background-color: #ededed;
+    color: #1c1c1c;
     font-family: var(--font-inter);
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: rgba(197, 160, 89, 0.25);
-    color: #1c1917;
+    background-color: rgba(7, 59, 255, 0.18);
+    color: #1c1c1c;
   }
 
   /* Emil Design Engineering: Instant button feedback on active press */
@@ -37,14 +37,14 @@
   width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #faf8f5;
+  background: #ededed;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #d0c6b3;
+  background: #bdbdbd;
   border-radius: 9999px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #c5a059;
+  background: #073bff;
 }
 
 /* Glassmorphism utility for raw off-white mode */

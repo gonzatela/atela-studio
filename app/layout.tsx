@@ -15,8 +15,8 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: 'Atela Studio | Diseño Web Exclusivo & Creación Digital',
-  description: 'Estudio de diseño web profesional de forma rápida y a medida por Gonzalo Atela.',
+  title: 'Atela Studio | Diseno Web Exclusivo & Creacion Digital',
+  description: 'Estudio de diseno web profesional de forma rapida y a medida por Gonzalo Atela.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   authors: [{ name: 'Gonzalo Atela' }],
   openGraph: {
-    title: 'Atela Studio | Diseño Web Exclusivo & Creación Digital',
-    description: 'Estudio de diseño web profesional de forma rápida y a medida por Gonzalo Atela.',
+    title: 'Atela Studio | Diseno Web Exclusivo & Creacion Digital',
+    description: 'Estudio de diseno web profesional de forma rapida y a medida por Gonzalo Atela.',
     url: 'https://atelastudio.com',
     siteName: 'Atela Studio',
     locale: 'es_ES',
@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`scroll-smooth ${inter.variable} ${syne.variable}`}>
-      <body className="bg-[#faf8f5] text-[#1c1917] antialiased selection:bg-[#c5a059]/25 selection:text-[#1c1917] custom-scrollbar">
+      <body className="custom-scrollbar bg-[#ededed] text-[#1c1c1c] antialiased selection:bg-[#073bff]/20 selection:text-[#1c1c1c]">
         {children}
       </body>
     </html>
