@@ -7,12 +7,12 @@ import { FOUNDER_IMAGE } from '@/data/founder';
 import { PROJECTS } from '@/data/projects';
 
 const services = [
-  'Direccion visual',
+  'Dirección visual',
   'Web a medida',
   'Identidad digital',
   'Contenido y estructura',
   'Responsive',
-  'Publicacion',
+  'Publicación',
 ];
 
 const projectTypes = [
@@ -63,7 +63,7 @@ export default function Home() {
             Atela Studio
           </p>
           <h1 className="text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.04em] text-[#ededed] sm:text-6xl md:text-7xl">
-            La web tambien decide por tu marca
+            Tu web tiene que vender antes que tú
           </h1>
         </div>
       </section>
@@ -71,34 +71,11 @@ export default function Home() {
       <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1160px]">
           <p className="max-w-5xl text-[30px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#1c1c1c] sm:text-5xl md:text-[64px]">
-            Atela Studio crea webs elegantes, rapidas y pensadas para que una marca parezca tan seria como el producto que vende.
+            Atela Studio crea webs elegantes, rápidas y pensadas para que una marca parezca tan seria como el producto que vende.
           </p>
           <p className="mt-8 max-w-2xl text-lg font-medium leading-[1.35] text-[#7a7a7a] md:text-2xl">
-            Diseno visual exigente, estructura clara y desarrollo con herramientas modernas para pasar de idea a pagina publicada sin perder detalle por el camino.
+            Diseño visual exigente, estructura clara y desarrollo con herramientas modernas para pasar de idea a página publicada sin perder detalle por el camino.
           </p>
-        </div>
-      </section>
-
-      <section id="about" className="px-5 pb-28 md:px-8">
-        <div className="mx-auto grid max-w-[1160px] gap-8 md:grid-cols-[0.88fr_1.12fr] md:items-end">
-          <div className="overflow-hidden rounded-[10px] bg-[#d8d8d8]">
-            <img
-              src={FOUNDER_IMAGE}
-              alt="Gonzalo Atela"
-              className="aspect-[4/5] h-full w-full object-cover grayscale-[18%]"
-            />
-          </div>
-          <div className="pb-1">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7a7a7a]">
-              Gonzalo Atela
-            </p>
-            <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
-              Pequeno estudio, decisiones rapidas.
-            </h2>
-            <p className="mt-6 max-w-xl text-xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#7a7a7a] md:text-2xl">
-              Trabajo contigo de forma directa: concepto, estructura, diseno, desarrollo y publicacion. Sin capas innecesarias.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -143,6 +120,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="about" className="px-5 pb-28 md:px-8">
+        <div className="mx-auto grid max-w-[1160px] gap-8 md:grid-cols-[0.88fr_1.12fr] md:items-end">
+          <div className="overflow-hidden rounded-[10px] bg-[#d8d8d8]">
+            <img
+              src={FOUNDER_IMAGE}
+              alt="Gonzalo Atela"
+              className="aspect-[4/5] h-full w-full object-cover grayscale-[18%]"
+            />
+          </div>
+          <div className="pb-1">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7a7a7a]">
+              Gonzalo Atela
+            </p>
+            <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
+              Pequeño estudio, decisiones rápidas.
+            </h2>
+            <p className="mt-6 max-w-xl text-xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#7a7a7a] md:text-2xl">
+              Trabajo contigo de forma directa: concepto, estructura, diseño, desarrollo y publicación. Sin capas innecesarias.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="px-2 pb-6 md:px-3">
         <div className="rounded-[10px] bg-[#073bff] px-5 py-16 text-white md:px-12 md:py-20">
           <div className="mx-auto max-w-[1160px]">
@@ -150,7 +150,7 @@ export default function Home() {
               <div>
                 <p className="text-2xl font-black lowercase tracking-[-0.06em]">atela</p>
                 <h2 className="mt-8 max-w-4xl text-balance text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
-                  Ideas, webs en marcha y decisiones de diseno bien tomadas.
+                  Ideas, webs en marcha y decisiones de diseño bien tomadas.
                   <br />
                   <a
                     href={`mailto:g.atelanavarro@gmail.com?subject=${mailSubject}&body=${mailBody}`}
@@ -163,7 +163,7 @@ export default function Home() {
 
               <div>
                 <p className="text-2xl font-semibold leading-[1] tracking-[-0.05em] text-white/72">
-                  Ready when you are. Elige el tipo de proyecto y escribeme con el contexto inicial.
+                  Ready when you are. Elige el tipo de proyecto y escríbeme con el contexto inicial.
                 </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-2">
