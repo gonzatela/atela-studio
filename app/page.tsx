@@ -6,7 +6,6 @@ import { ArrowUpRight, Mail } from "lucide-react";
 import { HERO_BG_IMAGE } from "@/data/heroBg";
 import { FOUNDER_IMAGE } from "@/data/founder";
 import { PROJECTS } from "@/data/projects";
-import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 
 const services = [
   "Dirección visual",
@@ -44,6 +43,17 @@ export default function Home() {
       ease: [0.23, 1, 0.32, 1],
     },
   });
+  const heroReveal = (delay = 0) => ({
+    initial: reduceMotion
+      ? { opacity: 1 }
+      : { opacity: 0, transform: "translateY(18px)" },
+    animate: { opacity: 1, transform: "translateY(0px)" },
+    transition: {
+      duration: 0.7,
+      delay,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  });
 
   const mailSubject = encodeURIComponent(
     `Nuevo proyecto: ${selectedProjectType}`,
@@ -77,14 +87,36 @@ export default function Home() {
         </nav>
       </header>
 
-      <ScrollExpandMedia
-        mediaSrc={HERO_BG_IMAGE}
-        bgImageSrc={HERO_BG_IMAGE}
-        eyebrow="Atela Studio"
-        title="La primera impresión empieza con un clic."
-        subtitle="Y nosotros sabemos lo importante que es."
-        scrollToExpand="Desliza para entrar"
-      />
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#06111f] px-5">
+        <img
+          src={HERO_BG_IMAGE}
+          alt="Atela Studio visual background"
+          className="absolute inset-0 h-full w-full object-cover opacity-75 brightness-[0.65] contrast-[1.15] saturate-[0.85]"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.45)_0,rgba(255,255,255,0.2)_7%,rgba(6,17,31,0)_24%),linear-gradient(115deg,rgba(255,255,255,0.55)_0,rgba(255,255,255,0)_18%),linear-gradient(64deg,rgba(59,130,246,0.38)_0,rgba(59,130,246,0)_35%)]" />
+        <div className="absolute inset-0 bg-black/20" />
+
+        <div className="relative z-10 max-w-5xl text-center">
+          <motion.p
+            {...heroReveal(0.08)}
+            className="mb-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70"
+          >
+            Atela Studio
+          </motion.p>
+          <motion.h1
+            {...heroReveal(0.18)}
+            className="text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.04em] text-[#ededed] sm:text-6xl md:text-7xl"
+          >
+            La primera impresión empieza con un clic.
+          </motion.h1>
+          <motion.p
+            {...heroReveal(0.3)}
+            className="mx-auto mt-6 max-w-2xl text-balance text-lg font-semibold leading-[1.15] tracking-[-0.03em] text-white/92 drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] sm:text-2xl md:text-3xl"
+          >
+            Y nosotros sabemos lo importante que es.
+          </motion.p>
+        </div>
+      </section>
 
       <section className="px-5 py-20 md:px-8 md:py-28">
         <motion.div {...reveal()} className="mx-auto max-w-[1160px]">
