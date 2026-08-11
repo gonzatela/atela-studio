@@ -107,7 +107,7 @@ export default function Home() {
           <h1 className="text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.04em] text-[#ededed] sm:text-6xl md:text-7xl">
             La primera impresión empieza con un clic.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-balance text-lg font-semibold leading-[1.15] tracking-[-0.03em] text-white/72 sm:text-2xl md:text-3xl">
+          <p className="mx-auto mt-6 max-w-2xl text-balance text-lg font-semibold leading-[1.15] tracking-[-0.03em] text-white/92 drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] sm:text-2xl md:text-3xl">
             Y nosotros sabemos lo importante que es.
           </p>
         </div>
