@@ -136,6 +136,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.45)_0,rgba(255,255,255,0.2)_7%,rgba(6,17,31,0)_24%),linear-gradient(115deg,rgba(255,255,255,0.55)_0,rgba(255,255,255,0)_18%),linear-gradient(64deg,rgba(59,130,246,0.38)_0,rgba(59,130,246,0)_35%)]" />
         <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.46)_0,rgba(0,0,0,0.24)_34%,rgba(0,0,0,0)_68%)]" />
 
         <div className="relative z-10 max-w-5xl text-center">
           <motion.p
@@ -152,7 +153,7 @@ export default function Home() {
           </motion.h1>
           <motion.p
             {...heroReveal(0.3)}
-            className="mx-auto mt-6 max-w-2xl text-balance text-lg font-semibold leading-[1.15] tracking-[-0.03em] text-white/92 drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] sm:text-2xl md:text-3xl"
+            className="mx-auto mt-6 max-w-2xl text-balance text-lg font-bold leading-[1.15] tracking-[-0.03em] text-white drop-shadow-[0_4px_22px_rgba(0,0,0,0.75)] sm:text-2xl md:text-3xl"
           >
             Y nosotros sabemos lo importante que es.
           </motion.p>
