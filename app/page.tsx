@@ -42,19 +42,14 @@ export default function Home() {
     target: contactRef,
     offset: ["start end", "end end"],
   });
-  const islandScaleX = useTransform(scrollYProgress, [0, 0.52], [0.46, 1]);
-  const islandScaleY = useTransform(scrollYProgress, [0, 0.52], [0.16, 1]);
-  const islandY = useTransform(scrollYProgress, [0, 0.52], ["30%", "0%"]);
+  const islandScaleX = useTransform(scrollYProgress, [0, 0.58], [0.997, 1]);
+  const islandScaleY = useTransform(scrollYProgress, [0, 0.58], [0.075, 1]);
+  const islandY = useTransform(scrollYProgress, [0, 0.58], ["-1%", "0%"]);
   const islandOpacity = useTransform(scrollYProgress, [0, 0.08], [0, 1]);
   const islandContentOpacity = useTransform(
     scrollYProgress,
-    [0.34, 0.62],
+    [0.42, 0.68],
     [0, 1],
-  );
-  const islandCompactOpacity = useTransform(
-    scrollYProgress,
-    [0.12, 0.36],
-    [1, 0],
   );
   const islandTransform = useMotionTemplate`translateY(${islandY}) scaleX(${islandScaleX}) scaleY(${islandScaleY})`;
   const islandStyle = reduceMotion
@@ -63,9 +58,6 @@ export default function Home() {
   const islandContentStyle = reduceMotion
     ? { opacity: 1 }
     : { opacity: islandContentOpacity };
-  const islandCompactStyle = reduceMotion
-    ? { opacity: 0 }
-    : { opacity: islandCompactOpacity };
 
   const mailSubject = encodeURIComponent(
     `Nuevo proyecto: ${selectedProjectType}`,
@@ -207,26 +199,35 @@ export default function Home() {
         id="contact"
         className="relative min-h-[155vh] px-2 pb-6 md:px-3"
       >
-        <div className="sticky top-20 flex min-h-[calc(100vh-5.5rem)] items-start justify-center overflow-hidden pt-3">
-          <motion.div
-            aria-hidden="true"
-            style={islandCompactStyle}
-            className="pointer-events-none absolute top-3 z-0 flex h-20 w-[min(640px,calc(100vw-2rem))] items-center justify-between rounded-[30px] bg-[#073bff] px-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-[0_18px_60px_rgba(7,59,255,0.28)]"
-          >
-            <span>Work</span>
-            <span className="text-2xl font-black lowercase tracking-[-0.06em]">
-              atela
-            </span>
-            <span>Contact</span>
-          </motion.div>
-
+        <div className="sticky top-2 z-[60] flex min-h-[calc(100vh-1rem)] items-start justify-center overflow-hidden md:top-3 md:min-h-[calc(100vh-1.5rem)]">
           <motion.div
             style={islandStyle}
-            className="relative z-10 max-h-[calc(100vh-5.5rem)] w-full origin-top overflow-y-auto rounded-[10px] bg-[#073bff] px-5 py-14 text-white shadow-[0_30px_90px_rgba(7,59,255,0.22)] will-change-transform md:px-12 md:py-16"
+            className="relative z-10 max-h-[calc(100vh-1rem)] w-full origin-top overflow-y-auto rounded-[14px] bg-[#073bff] px-5 py-4 text-white shadow-[0_30px_90px_rgba(7,59,255,0.22)] will-change-transform md:max-h-[calc(100vh-1.5rem)] md:px-12"
           >
+            <nav className="grid grid-cols-3 items-center text-[11px] font-semibold uppercase tracking-[0.18em]">
+              <a
+                href="#work"
+                className="justify-self-start transition-opacity hover:opacity-60"
+              >
+                Work
+              </a>
+              <a
+                href="#"
+                className="justify-self-center text-xl font-black lowercase tracking-[-0.06em] md:text-2xl"
+              >
+                atela
+              </a>
+              <a
+                href="#contact"
+                className="justify-self-end transition-opacity hover:opacity-60"
+              >
+                Contact
+              </a>
+            </nav>
+
             <motion.div
               style={islandContentStyle}
-              className="mx-auto max-w-[1160px]"
+              className="mx-auto max-w-[1160px] py-10 md:py-14"
             >
               <div className="grid gap-12 lg:grid-cols-[1fr_0.92fr] lg:items-end">
                 <div>
