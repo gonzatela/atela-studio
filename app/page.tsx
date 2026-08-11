@@ -22,7 +22,6 @@ const projectTypes = [
   "Portfolio",
   "Inmobiliaria",
   "Interiorismo",
-  "E-commerce",
   "Landing page",
 ];
 
