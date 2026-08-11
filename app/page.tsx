@@ -1,37 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import { HERO_BG_IMAGE } from '@/data/heroBg';
 import { FOUNDER_IMAGE } from '@/data/founder';
 import { PROJECTS } from '@/data/projects';
-
-const jumpLinks = [
-  {
-    title: 'Web publicada',
-    text: 'Atela Homes, una web inmobiliaria ya en produccion.',
-    image: PROJECTS[0]?.image,
-    href: 'https://atelahomes.vercel.app/',
-  },
-  {
-    title: 'Nuevo proyecto',
-    text: 'G&N Interiorismo, portfolio visual para arquitectura e interiorismo.',
-    image: PROJECTS[1]?.image,
-    href: 'https://www.gnginteriorismo.com/',
-  },
-  {
-    title: 'El equipo',
-    text: 'Un estudio pequeno con trato directo, criterio y velocidad.',
-    image: FOUNDER_IMAGE,
-    href: '#about',
-  },
-  {
-    title: 'Contacto',
-    text: 'Por mail, LinkedIn o una primera llamada para aterrizar la idea.',
-    image: '',
-    href: '#contact',
-  },
-];
 
 const services = [
   'Direccion visual',
@@ -42,7 +15,24 @@ const services = [
   'Publicacion',
 ];
 
+const projectTypes = [
+  'Web corporativa',
+  'Portfolio',
+  'Inmobiliaria',
+  'Interiorismo',
+  'E-commerce',
+  'Landing page',
+];
+
 export default function Home() {
+  const [selectedProjectType, setSelectedProjectType] = useState(projectTypes[0]);
+  const [email, setEmail] = useState('');
+
+  const mailSubject = encodeURIComponent(`Nuevo proyecto: ${selectedProjectType}`);
+  const mailBody = encodeURIComponent(
+    `Hola Gonzalo,\n\nQuiero hablar sobre un proyecto de tipo: ${selectedProjectType}.\n\nMi email: ${email || ''}\n\nGracias.`
+  );
+
   return (
     <main className="min-h-screen bg-[#ededed] text-[#1c1c1c]">
       <header className="fixed left-2 right-2 top-2 z-50 rounded-[14px] bg-[#ededed]/90 px-5 py-4 shadow-[0_8px_28px_rgba(0,0,0,0.12)] backdrop-blur-xl md:left-3 md:right-3">
@@ -53,8 +43,8 @@ export default function Home() {
           <a href="#" className="justify-self-center text-xl font-black lowercase tracking-[-0.06em] md:text-2xl">
             atela
           </a>
-          <a href="#about" className="justify-self-end transition-opacity hover:opacity-50">
-            About
+          <a href="#contact" className="justify-self-end transition-opacity hover:opacity-50">
+            Contact
           </a>
         </nav>
       </header>
@@ -78,7 +68,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="px-5 py-20 md:px-8 md:py-28">
+      <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1160px]">
           <p className="max-w-5xl text-[30px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#1c1c1c] sm:text-5xl md:text-[64px]">
             Atela Studio crea webs elegantes, rapidas y pensadas para que una marca parezca tan seria como el producto que vende.
@@ -89,35 +79,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-24 md:px-8">
-        <div className="mx-auto grid max-w-[1160px] gap-4 md:grid-cols-[92px_1fr] md:gap-8">
-          <div className="flex gap-4 md:block">
-            <p className="shrink-0 text-sm font-bold tracking-[-0.03em]">Jump to</p>
-            <div className="h-px flex-1 bg-[#1c1c1c] md:mt-3 md:h-72 md:w-px" />
+      <section id="about" className="px-5 pb-28 md:px-8">
+        <div className="mx-auto grid max-w-[1160px] gap-8 md:grid-cols-[0.88fr_1.12fr] md:items-end">
+          <div className="overflow-hidden rounded-[10px] bg-[#d8d8d8]">
+            <img
+              src={FOUNDER_IMAGE}
+              alt="Gonzalo Atela"
+              className="aspect-[4/5] h-full w-full object-cover grayscale-[18%]"
+            />
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {jumpLinks.map((item) => (
-              <a key={item.title} href={item.href} className="group block">
-                <div className="relative aspect-square overflow-hidden rounded-[8px] bg-[#e4e4e4]">
-                  {item.image ? (
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle,rgba(28,28,28,0.22),rgba(28,28,28,0.08)_38%,rgba(228,228,228,1)_70%)]">
-                      <span className="text-4xl font-black tracking-[0.08em] text-white">...</span>
-                    </div>
-                  )}
-                </div>
-                <h2 className="mt-3 text-lg font-bold leading-none tracking-[-0.04em]">{item.title}</h2>
-                <p className="mt-1 text-lg font-semibold leading-[0.98] tracking-[-0.04em] text-[#7a7a7a]">
-                  {item.text}
-                </p>
-              </a>
-            ))}
+          <div className="pb-1">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7a7a7a]">
+              Gonzalo Atela
+            </p>
+            <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
+              Pequeno estudio, decisiones rapidas.
+            </h2>
+            <p className="mt-6 max-w-xl text-xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#7a7a7a] md:text-2xl">
+              Trabajo contigo de forma directa: concepto, estructura, diseno, desarrollo y publicacion. Sin capas innecesarias.
+            </p>
           </div>
         </div>
       </section>
@@ -144,7 +124,7 @@ export default function Home() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                 />
               </div>
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
@@ -163,60 +143,93 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-2 pb-24 md:px-3">
-        <div className="rounded-[10px] bg-[#073bff] px-5 py-20 text-center text-white md:py-28">
-          <p className="mx-auto max-w-3xl text-balance text-3xl font-semibold leading-[1] tracking-[-0.05em] md:text-5xl">
-            Ideas, webs en marcha y decisiones de diseno bien tomadas.
-          </p>
-          <form className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              placeholder="tu@email.com"
-              className="h-14 flex-1 rounded-[10px] border border-white/10 bg-white/12 px-5 text-sm font-semibold text-white outline-none placeholder:text-white/55"
-            />
-            <button
-              type="button"
-              className="h-14 rounded-[10px] bg-[#ededed] px-10 text-sm font-bold text-[#1c1c1c] transition-transform active:scale-[0.98]"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </section>
+      <section id="contact" className="px-2 pb-6 md:px-3">
+        <div className="rounded-[10px] bg-[#073bff] px-5 py-16 text-white md:px-12 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <div className="grid gap-12 lg:grid-cols-[1fr_0.92fr] lg:items-end">
+              <div>
+                <p className="text-2xl font-black lowercase tracking-[-0.06em]">atela</p>
+                <h2 className="mt-8 max-w-4xl text-balance text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
+                  Ideas, webs en marcha y decisiones de diseno bien tomadas.
+                  <br />
+                  <a
+                    href={`mailto:g.atelanavarro@gmail.com?subject=${mailSubject}&body=${mailBody}`}
+                    className="text-white/58 transition-colors hover:text-white"
+                  >
+                    Book call
+                  </a>
+                </h2>
+              </div>
 
-      <section id="contact" className="px-5 pb-28 md:px-8">
-        <div className="mx-auto max-w-[1160px]">
-          <p className="text-2xl font-black lowercase tracking-[-0.06em]">atela</p>
-          <h2 className="mt-4 text-5xl font-semibold leading-[0.92] tracking-[-0.06em] md:text-7xl">
-            Ready when you are
-            <br />
-            <a href="mailto:g.atelanavarro@gmail.com" className="text-[#7a7a7a] transition-colors hover:text-[#073bff]">
-              Book call
-            </a>
-          </h2>
+              <div>
+                <p className="text-2xl font-semibold leading-[1] tracking-[-0.05em] text-white/72">
+                  Ready when you are. Elige el tipo de proyecto y escribeme con el contexto inicial.
+                </p>
 
-          <div className="mt-12 flex flex-wrap gap-3">
-            {services.map((service) => (
-              <span key={service} className="rounded-full border border-[#1c1c1c]/15 px-4 py-2 text-sm font-semibold">
-                {service}
-              </span>
-            ))}
-          </div>
+                <div className="mt-8 grid grid-cols-2 gap-2">
+                  {projectTypes.map((type) => {
+                    const isSelected = selectedProjectType === type;
+                    return (
+                      <button
+                        key={type}
+                        type="button"
+                        onClick={() => setSelectedProjectType(type)}
+                        className={`min-h-12 rounded-[10px] border px-3 text-left text-sm font-bold transition-colors ${
+                          isSelected
+                            ? 'border-white bg-white text-[#073bff]'
+                            : 'border-white/20 bg-white/10 text-white hover:bg-white/15'
+                        }`}
+                      >
+                        {type}
+                      </button>
+                    );
+                  })}
+                </div>
 
-          <div className="mt-16 flex flex-col gap-4 border-t border-[#1c1c1c]/15 pt-8 text-sm font-semibold md:flex-row md:items-center md:justify-between">
-            <a href="mailto:g.atelanavarro@gmail.com" className="inline-flex items-center gap-2 hover:text-[#073bff]">
-              <Mail className="h-4 w-4" />
-              g.atelanavarro@gmail.com
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gonzalo-atela/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-[#073bff]"
-            >
-              LinkedIn
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    placeholder="tu@email.com"
+                    className="h-14 flex-1 rounded-[10px] border border-white/15 bg-white/10 px-5 text-sm font-semibold text-white outline-none placeholder:text-white/55 focus:border-white/55"
+                  />
+                  <a
+                    href={`mailto:g.atelanavarro@gmail.com?subject=${mailSubject}&body=${mailBody}`}
+                    className="inline-flex h-14 items-center justify-center rounded-[10px] bg-[#ededed] px-7 text-sm font-bold text-[#1c1c1c] transition-transform active:scale-[0.98]"
+                  >
+                    Contactar
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-3">
+              {services.map((service) => (
+                <span key={service} className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/90">
+                  {service}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-14 flex flex-col gap-4 border-t border-white/20 pt-7 text-sm font-semibold text-white/80 md:flex-row md:items-center md:justify-between">
+              <a href="mailto:g.atelanavarro@gmail.com" className="inline-flex items-center gap-2 hover:text-white">
+                <Mail className="h-4 w-4" />
+                g.atelanavarro@gmail.com
+              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://www.linkedin.com/in/gonzalo-atela/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-white"
+                >
+                  LinkedIn
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <span>Copyright 2026 Atela Studio. Todos los derechos reservados.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
