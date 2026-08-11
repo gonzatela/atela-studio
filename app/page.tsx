@@ -6,6 +6,7 @@ import { ArrowUpRight, Mail } from "lucide-react";
 import { HERO_BG_IMAGE } from "@/data/heroBg";
 import { FOUNDER_IMAGE } from "@/data/founder";
 import { PROJECTS } from "@/data/projects";
+import { Timeline } from "@/components/ui/timeline";
 
 const services = [
   "Dirección visual",
@@ -24,6 +25,46 @@ const projectTypes = [
   "E-commerce",
   "Landing page",
 ];
+
+const projectTimeline = PROJECTS.map((project) => ({
+  title: project.year,
+  content: (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block"
+    >
+      <div className="overflow-hidden rounded-[10px] bg-[#d8d8d8]">
+        <div className="aspect-[4/3] md:aspect-[16/10]">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+          />
+        </div>
+      </div>
+
+      <div className="mt-5 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#7a7a7a]">
+            {project.category} / {project.client}
+          </p>
+          <h3 className="mt-2 text-4xl font-semibold leading-[0.94] tracking-[-0.06em] text-[#1c1c1c] md:text-6xl">
+            {project.title}
+          </h3>
+          <p className="mt-4 max-w-2xl text-base font-semibold leading-[1.2] tracking-[-0.03em] text-[#7a7a7a] md:text-xl">
+            {project.description}
+          </p>
+        </div>
+
+        <span className="inline-grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#1c1c1c] text-white transition-transform group-hover:rotate-45">
+          <ArrowUpRight className="h-5 w-5" />
+        </span>
+      </div>
+    </a>
+  ),
+}));
 
 export default function Home() {
   const [selectedProjectType, setSelectedProjectType] = useState(
@@ -132,8 +173,11 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="work" className="px-2 pb-28 md:px-3">
-        <motion.div {...reveal()} className="mb-8 text-center">
+      <section id="work" className="px-5 pb-28 md:px-8">
+        <motion.div
+          {...reveal()}
+          className="mx-auto mb-2 max-w-[1160px] text-center"
+        >
           <h2 className="text-5xl font-semibold leading-[0.9] tracking-[-0.06em] md:text-7xl">
             Our work
             <br />
@@ -141,39 +185,7 @@ export default function Home() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-3 md:grid-cols-2">
-          {PROJECTS.map((project, index) => (
-            <motion.a
-              {...reveal(index * 0.08)}
-              key={project.id}
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block overflow-hidden rounded-[10px] bg-[#d8d8d8]"
-            >
-              <div className="aspect-[4/3] md:aspect-[16/11]">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.035]"
-                />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70">
-                    {project.category} / {project.year}
-                  </p>
-                  <h3 className="mt-1 text-3xl font-semibold tracking-[-0.05em]">
-                    {project.title}
-                  </h3>
-                </div>
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-white text-[#1c1c1c] transition-transform group-hover:rotate-45">
-                  <ArrowUpRight className="h-5 w-5" />
-                </span>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+        <Timeline data={projectTimeline} />
       </section>
 
       <section id="about" className="px-5 pb-28 md:px-8">
