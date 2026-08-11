@@ -36,11 +36,11 @@ const projectTimeline = PROJECTS.map((project) => ({
       className="group block"
     >
       <div className="overflow-hidden rounded-[10px] bg-[#d8d8d8]">
-        <div className="aspect-[4/3] md:aspect-[16/10]">
+        <div className="aspect-video">
           <img
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+            className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
         </div>
       </div>
